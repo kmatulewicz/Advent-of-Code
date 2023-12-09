@@ -1,4 +1,4 @@
-// Description of the task: https://adventofcode.com/2015/day/1
+// Description of the task: https://adventofcode.com/2015/day/2
 
 package main
 

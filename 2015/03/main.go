@@ -1,3 +1,5 @@
+// Description of the task: https://adventofcode.com/2015/day/3
+
 package main
 
 import (
