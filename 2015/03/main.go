@@ -4,15 +4,12 @@ package main
 
 import (
 	"fmt"
-	"os"
+	"helpers"
 	"slices"
 )
 
 func main() {
-	input, err := os.ReadFile("input")
-	if err != nil {
-		panic(err)
-	}
+	input := helpers.Load("input")
 
 	// Part 1
 	santa := New()

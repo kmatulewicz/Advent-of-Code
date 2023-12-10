@@ -4,16 +4,12 @@ package main
 
 import (
 	"fmt"
-	"os"
+	"helpers"
 	"strings"
 )
 
 func main() {
-	input, err := os.ReadFile("input")
-	if err != nil {
-		panic(err)
-	}
-	lines := strings.Split(string(input), "\n")
+	lines := helpers.LoadLines("input")
 
 	// Part 1
 	counter := 0

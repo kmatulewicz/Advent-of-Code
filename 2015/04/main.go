@@ -6,16 +6,13 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
-	"os"
+	"helpers"
 	"strconv"
 	"strings"
 )
 
 func main() {
-	content, err := os.ReadFile("input")
-	if err != nil {
-		panic(err)
-	}
+	content := helpers.Load("input")
 	input := strings.TrimSpace(string(content))
 
 	answer := findLowestSuffix(input, 5)

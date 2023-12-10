@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"helpers"
 	"io"
 	"os"
 )
@@ -21,18 +22,9 @@ func main() {
 
 }
 
-func loadFileToString(name string) string {
-	out, err := os.ReadFile(name)
-	if err != nil {
-		panic(err)
-	}
-
-	return string(out)
-}
-
 func countFromString(name string) (lastFloor, basementEntrance int) {
 	floor, basementEntrance := 0, 0
-	input := loadFileToString(name)
+	input := helpers.Load(name)
 
 	for i, move := range input {
 		switch {

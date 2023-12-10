@@ -4,18 +4,11 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"strings"
+	"helpers"
 )
 
 func main() {
-	input, err := os.ReadFile("input")
-	if err != nil {
-		panic(err)
-	}
-	lines := strings.Split(string(input), "\n")
-	//remove last empty line
-	lines = lines[:len(lines)-1]
+	lines := helpers.LoadLines("input")
 
 	// Part 1
 	g := New()

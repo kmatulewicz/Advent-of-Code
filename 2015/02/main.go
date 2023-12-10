@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"os"
+	"helpers"
 	"strconv"
 	"strings"
 )
@@ -24,21 +24,15 @@ func main() {
 }
 
 func loadInput(name string) []present {
-	input, err := os.ReadFile(name)
-	if err != nil {
-		panic(err)
-	}
+
 	var presents []present
 
-	lines := strings.Split(string(input), "\n")
+	lines := helpers.LoadLines(name)
 	for _, line := range lines {
-		// last line is empty
-		if len(line) == 0 {
-			continue
-		}
 		numbers := strings.Split(line, "x")
 
 		var present present
+		var err error
 		present.l, err = strconv.Atoi(numbers[0])
 		if err != nil {
 			panic(err)
