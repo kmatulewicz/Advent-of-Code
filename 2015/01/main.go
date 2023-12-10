@@ -51,7 +51,7 @@ func countByteByByte(name string) (lastFloor, basementEntrance int) {
 
 	f, err := os.Open(name)
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 	defer f.Close()
 
@@ -60,7 +60,7 @@ func countByteByByte(name string) (lastFloor, basementEntrance int) {
 		_, err := f.Read(b)
 		if err != nil {
 			if err != io.EOF {
-				panic(err)
+				panic(err.Error())
 			}
 			break
 		}

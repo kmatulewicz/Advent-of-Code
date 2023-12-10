@@ -35,15 +35,15 @@ func loadInput(name string) []present {
 		var err error
 		present.l, err = strconv.Atoi(numbers[0])
 		if err != nil {
-			panic(err)
+			panic(err.Error())
 		}
 		present.w, err = strconv.Atoi(numbers[1])
 		if err != nil {
-			panic(err)
+			panic(err.Error())
 		}
 		present.h, err = strconv.Atoi(numbers[2])
 		if err != nil {
-			panic(err)
+			panic(err.Error())
 		}
 		presents = append(presents, present)
 	}

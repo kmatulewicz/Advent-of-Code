@@ -121,11 +121,11 @@ func splitCoordinates(s string) (int, int) {
 	c := strings.Split(s, ",")
 	x, err := strconv.Atoi(c[0])
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 	y, err := strconv.Atoi(c[1])
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 	return x, y
 }

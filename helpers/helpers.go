@@ -9,7 +9,7 @@ import (
 func Load(s string) string {
 	input, err := os.ReadFile("input")
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 
 	return string(input)

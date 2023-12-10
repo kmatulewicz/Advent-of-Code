@@ -29,7 +29,7 @@ func main() {
 func countEscapedString(s string) int {
 	uq, err := strconv.Unquote(s)
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 	return len(uq)
 }
