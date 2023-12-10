@@ -7,7 +7,7 @@ import (
 
 // Load loads specified file and return its content as string
 func Load(s string) string {
-	input, err := os.ReadFile("input")
+	input, err := os.ReadFile(s)
 	if err != nil {
 		panic(err.Error())
 	}
